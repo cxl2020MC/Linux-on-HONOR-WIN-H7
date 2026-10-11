@@ -35,3 +35,5 @@
 
 [rs0x29a/Linux-on-HONOR-MagicBook-14-Pro-2026-AI_ZQC-P_M1010](https://github.com/rs0x29a/Linux-on-HONOR-MagicBook-14-Pro-2026-AI_ZQC-P_M1010/blob/main/patch/fan/README.md#why-windows-behaves-differently) 这个仓库很多的东西对这台机器都有用
 
+
+还有感谢官方提供的功耗上不去是 DTT 驱动导致的线索
