@@ -21,6 +21,8 @@
 
 > 注：为了设备安全，请使用 intel 的 thermald 对设备进行温度控制和保护， 并且应用正确的 dtt 策略
 > 并且保证 termald 添加了 `--adaptive` 参数
+> 
+> [相关文档](https://man.archlinux.org/man/thermald.8#adaptive)
 
 主要缺失的东西就只有一个，在 `/sys/bus/platform/devices/INTC10A0:00` 下有个 `imok` 接口，只需要往内部定时写入 `1` 告诉 EC DTT 驱动正在正常运行。
 
