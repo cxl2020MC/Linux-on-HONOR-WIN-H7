@@ -25,3 +25,7 @@
 
 代码里面启动的时候写 PL1, PL2 功耗墙是为了，保证性能不会被 mmio-rapl 限制
 
+## 相关资料
+
+[rs0x29a/Linux-on-HONOR-MagicBook-14-Pro-2026-AI_ZQC-P_M1010](https://github.com/rs0x29a/Linux-on-HONOR-MagicBook-14-Pro-2026-AI_ZQC-P_M1010/blob/main/patch/fan/README.md#why-windows-behaves-differently) 这个仓库很多的东西对这台机器都有用
+
