@@ -20,7 +20,7 @@
 这个主要是由于 Windows 下 [英特尔®动态调谐技术（Intel® DTT）](https://www.intel.cn/content/www/cn/zh/support/articles/000102775/processors.html) 和 Linux 下 [thermald](https://github.com/intel/thermal_daemon) 实现有着细微差别导致的
 
 > 注：为了设备安全，请使用 intel 的 thermald 对设备进行温度控制和保护， 并且应用正确的 dtt 策略
-> 并且保证 termald 添加了 `--adaptive` 参数
+> 并且保证 thermald 添加了 `--adaptive` 参数
 > 
 > [相关文档](https://man.archlinux.org/man/thermald.8#adaptive)
 
