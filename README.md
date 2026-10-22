@@ -19,12 +19,14 @@
 
 这个主要是由于 Windows 下 [英特尔®动态调谐技术（Intel® DTT）](https://www.intel.cn/content/www/cn/zh/support/articles/000102775/processors.html) 和 Linux 下 [thermald](https://github.com/intel/thermal_daemon) 实现有着细微差别导致的
 
+> PS: 这问题挺明显的,不知道intel为啥一直不修
+
 > 注：为了设备安全，请使用 intel 的 thermald 对设备进行温度控制和保护， 并且应用正确的 dtt 策略
 > 并且保证 thermald 添加了 `--adaptive` 参数
 > 
 > [相关文档](https://man.archlinux.org/man/thermald.8#adaptive)
 
-主要缺失的东西就只有一个，在 `/sys/bus/platform/devices/INTC10A0:00` 下有个 `imok` 接口，只需要往内部定时写入 `1` 告诉 EC DTT 驱动正在正常运行。
+主要缺失的东西就只有一个，i7 版本在 `/sys/bus/platform/devices/INTC10A0:00` / U7 版本在 `/sys/bus/platform/devices/INTC1042:00` 下有个 `imok` 接口，只需要往内部定时写入 `1` 告诉 EC DTT 驱动正在正常运行。
 
 所以非常简单的就可以得出解决方案
 为本仓库目录下的 [power-daemon.py](power-daemon.py) 添加为系统服务并且开机自启动， 并且按照上文配置好 termald 服务
