@@ -2,7 +2,11 @@
 import time
 import pathlib
 
-INTC_DEV = pathlib.Path("/sys/bus/platform/devices/INTC10A0:00")
+
+if(pathlib.Path("/sys/bus/platform/devices/INTC1042:00").exists()):
+    INTC_DEV = pathlib.Path("/sys/bus/platform/devices/INTC1042:00")
+else:
+    INTC_DEV = pathlib.Path("/sys/bus/platform/devices/INTC10A0:00")
 RAPL_MMIO = pathlib.Path("/sys/class/powercap/intel-rapl-mmio/intel-rapl-mmio:0")
 IMOK_FILE = INTC_DEV / "imok"
 
